@@ -1,8 +1,12 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "My Favorite Games";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Games</h1>
-
+<div class="text-center">
+    <h1 class="display-4">My Favorite Games</h1>
+    @foreach (MediaMatters.Models.Game g in Model)
+    {
+        <div>@g.GameTitle @g.Developer @g.Publisher @g.DateReleased @g.Genre @g.CoverImage @g.Notes</div>
+    }
+</div>

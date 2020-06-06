@@ -1,8 +1,12 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "My Favorite Albums";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Albums</h1>
-
+<div class="text-center">
+    <h1 class="display-4">My Favorite Albums</h1>
+    @foreach (MediaMatters.Models.Album a in Model)
+    {
+        <div>@a.AlbumTitle @a.Artist @a.CoverImage @a.Notes</div>
+    }
+</div>
